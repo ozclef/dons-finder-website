@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Song Finder - Identifica Cualquier Canción Grabando, Tarareando o Subiendo</title>
+  <meta name="title" content="Song Finder - Identifica Cualquier Canción Grabando, Tarareando o Subiendo">
+  <meta name="description" content="Identificador de canciones online gratis. Descubre cualquier canción al instante grabando audio, tarareando la melodía o subiendo un archivo. Obtén letras, enlaces de Spotify y más.">
+  <meta name="keywords" content="buscador de canciones, identificador de música, shazam online, identificar canción, encontrar canción tarareando, reconocimiento de música, qué canción es esta, búsqueda de canciones">
+  <meta name="author" content="Song Finder">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://song-finder-extension.vercel.app/es/">
+
+  <!-- Hreflang Tags for International SEO -->
+  <link rel="alternate" hreflang="en" href="https://song-finder-extension.vercel.app/en/">
+  <link rel="alternate" hreflang="es" href="https://song-finder-extension.vercel.app/es/">
+  <link rel="alternate" hreflang="fr" href="https://song-finder-extension.vercel.app/fr/">
+  <link rel="alternate" hreflang="de" href="https://song-finder-extension.vercel.app/de/">
+  <link rel="alternate" hreflang="pt" href="https://song-finder-extension.vercel.app/pt/">
+  <link rel="alternate" hreflang="ar" href="https://song-finder-extension.vercel.app/ar/">
+  <link rel="alternate" hreflang="zh" href="https://song-finder-extension.vercel.app/zh/">
+  <link rel="alternate" hreflang="ja" href="https://song-finder-extension.vercel.app/ja/">
+  <link rel="alternate" hreflang="ko" href="https://song-finder-extension.vercel.app/ko/">
+  <link rel="alternate" hreflang="ru" href="https://song-finder-extension.vercel.app/ru/">
+  <link rel="alternate" hreflang="hi" href="https://song-finder-extension.vercel.app/hi/">
+  <link rel="alternate" hreflang="tr" href="https://song-finder-extension.vercel.app/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://song-finder-extension.vercel.app/en/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://song-finder-extension.vercel.app/es/">
+  <meta property="og:title" content="Song Finder - Identifica Cualquier Canción al Instante">
+  <meta property="og:description" content="Identificador de canciones online gratis. Descubre cualquier canción grabando, tarareando o subiendo archivos de audio.">
+  <meta property="og:image" content="https://song-finder-extension.vercel.app/images/og-image.png">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://song-finder-extension.vercel.app/es/">
+  <meta property="twitter:title" content="Song Finder - Identifica Cualquier Canción al Instante">
+  <meta property="twitter:description" content="Identificador de canciones online gratis. Descubre cualquier canción grabando, tarareando o subiendo archivos de audio.">
+  <meta property="twitter:image" content="https://song-finder-extension.vercel.app/images/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/home.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Song Finder",
+    "description": "Identifica cualquier canción grabando audio, tarareando la melodía o subiendo un archivo",
+    "url": "https://song-finder-extension.vercel.app/es/",
+    "applicationCategory": "MusicApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "es",
+    "availableLanguage": ["en", "es", "fr", "de", "pt", "ar", "zh", "ja", "ko", "ru", "hi", "tr"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Reconocimiento de audio grabado",
+      "Reconocimiento por tarareo",
+      "Análisis de archivos subidos",
+      "Visualización de letras",
+      "Integración con Spotify",
+      "Integración con YouTube"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="/es/" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+          <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span>Song Finder</span>
+      </a>
+      <nav class="nav">
+        <div class="language-selector">
+          <button class="lang-btn" id="langBtn" aria-label="Seleccionar idioma">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>ES</span>
+          </button>
+          <div class="lang-dropdown hidden" id="langDropdown">
+            <a href="/en/">English</a>
+            <a href="/es/" class="active">Español</a>
+            <a href="/fr/">Français</a>
+            <a href="/de/">Deutsch</a>
+            <a href="/pt/">Português</a>
+            <a href="/ar/">العربية</a>
+            <a href="/zh/">中文</a>
+            <a href="/ja/">日本語</a>
+            <a href="/ko/">한국어</a>
+            <a href="/ru/">Русский</a>
+            <a href="/hi/">हिन्दी</a>
+            <a href="/tr/">Türkçe</a>
+          </div>
+        </div>
+        <a href="#extension" class="btn btn-primary">Obtener Extensión</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Identifica Cualquier Canción en Segundos</h1>
+        <p class="hero-subtitle">Descubre música grabando, tarareando o subiendo archivos de audio</p>
+
+        <!-- Identification Card -->
+        <div class="identify-card">
+          <!-- Tabs -->
+          <div class="tabs">
+            <button class="tab active" data-tab="record">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+              <span>Grabar</span>
+            </button>
+            <button class="tab" data-tab="hum">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13"/>
+                <circle cx="6" cy="18" r="3"/>
+                <circle cx="18" cy="16" r="3"/>
+              </svg>
+              <span>Tararear</span>
+            </button>
+            <button class="tab" data-tab="upload">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <span>Subir</span>
+            </button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content">
+            <!-- Record Tab -->
+            <div class="tab-pane active" id="recordPane">
+              <div class="record-area">
+                <button class="record-btn" id="recordBtn" aria-label="Iniciar grabación">
+                  <div class="record-btn-inner">
+                    <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                      <line x1="12" y1="19" x2="12" y2="23"/>
+                      <line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring delay-1"></div>
+                    <div class="pulse-ring delay-2"></div>
+                  </div>
+                </button>
+                <p class="record-hint">Toca para identificar música cercana</p>
+                <div class="waveform hidden" id="waveform">
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="listening-text hidden" id="listeningText">Escuchando...</p>
+              </div>
+            </div>
+
+            <!-- Hum Tab -->
+            <div class="tab-pane" id="humPane">
+              <div class="record-area">
+                <button class="record-btn hum-btn" id="humBtn" aria-label="Empezar a tararear">
+                  <div class="record-btn-inner">
+                    <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 18V5l12-2v13"/>
+                      <circle cx="6" cy="18" r="3"/>
+                      <circle cx="18" cy="16" r="3"/>
+                    </svg>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring delay-1"></div>
+                    <div class="pulse-ring delay-2"></div>
+                  </div>
+                </button>
+                <p class="record-hint">Toca y tararea o canta la melodía</p>
+                <div class="waveform hidden" id="humWaveform">
+                  <span></span><span></span><span></span><span></span><span></span>
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="listening-text hidden" id="humListeningText">Escuchando tu melodía...</p>
+              </div>
+            </div>
+
+            <!-- Upload Tab -->
+            <div class="tab-pane" id="uploadPane">
+              <div class="upload-area" id="uploadArea">
+                <input type="file" id="audioFile" accept="audio/*" hidden>
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                <p class="upload-title">Arrastra y suelta el archivo de audio aquí</p>
+                <p class="upload-hint">o haz clic para buscar</p>
+                <p class="upload-formats">MP3, WAV, M4A, OGG, FLAC</p>
+              </div>
+              <div class="file-info hidden" id="fileInfo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+                <span id="fileName"></span>
+                <button class="remove-file" id="removeFile" aria-label="Eliminar archivo">&times;</button>
+              </div>
+              <button class="btn btn-primary btn-upload hidden" id="uploadBtn">Identificar Archivo</button>
+            </div>
+          </div>
+
+          <!-- Processing State -->
+          <div class="processing hidden" id="processing">
+            <div class="spinner"></div>
+            <p>Analizando audio...</p>
+          </div>
+        </div>
+
+        <!-- Result Section -->
+        <div class="result-section hidden" id="resultSection">
+          <div class="result-card">
+            <div class="result-album">
+              <img id="resultAlbumArt" src="" alt="Portada del álbum">
+            </div>
+            <div class="result-info">
+              <h2 class="result-title" id="resultTitle"></h2>
+              <p class="result-artist" id="resultArtist"></p>
+              <p class="result-album-name" id="resultAlbum"></p>
+              <div class="result-links">
+                <a href="#" id="spotifyLink" class="platform-link spotify" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                  </svg>
+                  Spotify
+                </a>
+                <a href="#" id="youtubeLink" class="platform-link youtube" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                  YouTube
+                </a>
+                <a href="#" id="deezerLink" class="platform-link deezer" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.81 4.16v3.03H24V4.16h-5.19zM6.27 8.38v3.027h5.189V8.38H6.27zm12.54 0v3.027H24V8.38h-5.19zM6.27 12.566v3.027h5.189v-3.027H6.27zm6.271 0v3.027h5.19v-3.027h-5.19zm6.27 0v3.027H24v-3.027h-5.19zM0 16.752v3.027h5.19v-3.027H0zm6.27 0v3.027h5.189v-3.027H6.27zm6.271 0v3.027h5.19v-3.027h-5.19zm6.27 0v3.027H24v-3.027h-5.19z"/>
+                  </svg>
+                  Deezer
+                </a>
+              </div>
+            </div>
+            <button class="btn btn-secondary" id="tryAgainBtn">Identificar Otra</button>
+          </div>
+
+          <!-- Lyrics -->
+          <div class="lyrics-section" id="lyricsSection">
+            <h3>Letra</h3>
+            <div class="lyrics-content" id="lyricsContent">
+              <p id="lyricsText"></p>
+            </div>
+            <button class="btn-expand" id="expandLyrics">Mostrar Más</button>
+          </div>
+        </div>
+
+        <!-- No Match State -->
+        <div class="no-match hidden" id="noMatch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M16 16s-1.5-2-4-2-4 2-4 2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+          <h3>No Se Encontró Coincidencia</h3>
+          <p>Intenta de nuevo con audio más claro o una parte diferente de la canción</p>
+          <button class="btn btn-primary" id="noMatchRetry">Intentar de Nuevo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history-section" id="historySection">
+      <div class="container">
+        <div class="section-header">
+          <h2>Historial Reciente</h2>
+          <button class="btn-clear" id="clearHistory">Borrar Todo</button>
+        </div>
+        <div class="history-scroll" id="historyScroll">
+          <!-- History items will be inserted here -->
+        </div>
+        <div class="history-empty hidden" id="historyEmpty">
+          <p>¡Aún no se han identificado canciones. Prueba identificar una canción arriba!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2>Cómo Funciona</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon record-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+            <h3>Grabar Audio</h3>
+            <p>Reproduce música de cualquier fuente - altavoces, TV o radio - y la identificamos al instante</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon hum-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13"/>
+                <circle cx="6" cy="18" r="3"/>
+                <circle cx="18" cy="16" r="3"/>
+              </svg>
+            </div>
+            <h3>Tararear o Cantar</h3>
+            <p>¿No recuerdas el nombre? Solo tararea o canta la melodía y la encontraremos para ti</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon upload-icon-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+            </div>
+            <h3>Subir Archivo</h3>
+            <p>¿Tienes un archivo de audio? Súbelo directamente y obtén resultados instantáneos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Extension CTA Section -->
+    <section class="extension-section" id="extension">
+      <div class="container">
+        <div class="extension-card">
+          <div class="extension-info">
+            <h2>Obtén la Extensión del Navegador</h2>
+            <p>Identifica canciones en cualquier pestaña del navegador con solo un clic. ¡No necesitas acercar tu teléfono a los altavoces!</p>
+            <ul class="extension-features">
+              <li>Identificación de canciones con un clic</li>
+              <li>Funciona en cualquier sitio web con audio</li>
+              <li>Obtén letras y enlaces a plataformas</li>
+              <li>Guarda tu historial de identificaciones</li>
+            </ul>
+            <a href="https://chromewebstore.google.com/detail/ddpodfdgekangnmkkanmeeaaddnagfob?utm_source=item-website-cta" class="btn btn-chrome" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-3.952 6.848a12.014 12.014 0 0 0 9.492-9.469H15.273z"/>
+              </svg>
+              <span>Añadir a Chrome - Es Gratis</span>
+            </a>
+          </div>
+          <div class="extension-preview">
+            <div class="browser-mockup">
+              <div class="browser-header">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-content">
+                <div class="ext-popup">
+                  <div class="ext-popup-header">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 18V5l12-2v13"/>
+                      <circle cx="6" cy="18" r="3"/>
+                      <circle cx="18" cy="16" r="3"/>
+                    </svg>
+                    Song Finder
+                  </div>
+                  <div class="ext-popup-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <p>Escuchando...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="/es/" class="logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span>Song Finder</span>
+          </a>
+          <p>Identifica cualquier canción al instante</p>
+        </div>
+        <div class="footer-links">
+          <a href="/es/about/">Acerca de</a>
+          <a href="/es/privacy/">Política de Privacidad</a>
+          <a href="/es/terms/">Términos de Servicio</a>
+          <a href="/es/contact/">Contacto</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Song Finder. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/home.js"></script>
+</body>
+</html>
